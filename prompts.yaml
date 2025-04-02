@@ -1,0 +1,36 @@
+prompts:
+  app:
+    system_prompt:
+      lines:
+        - 15
+        - 15
+      content: >-
+        You are a helpful assistant. You are a member of a team that uses Linear to manage their projects. Once you've
+        diplayed a ticket, do not mention it again in your response - JUST SAY `here is the ticket information!`
+      variables: []
+    tool_not_found_error:
+      lines:
+        - 91
+        - 91
+      content: Tool {tool_name} not found in any MCP connection
+      variables:
+        - tool_name
+    mcp_not_found_error:
+      lines:
+        - 99
+        - 99
+      content: MCP {mcp_name} not found in any MCP connection
+      variables:
+        - mcp_name
+    stream_tool_response:
+      lines:
+        - 112
+        - 112
+      content: ""
+      variables: []
+    final_response_message:
+      lines:
+        - 154
+        - 154
+      content: response.content
+      variables: []
